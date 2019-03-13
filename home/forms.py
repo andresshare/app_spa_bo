@@ -1,0 +1,25 @@
+from django import forms
+from .models import Contacto
+
+class FormularioContacto(forms.ModelForm):
+
+    class Meta:
+        model = Contacto
+
+        fields = [
+            'nombre',
+            'correo',
+            'mensaje',
+        ]
+        labels = {
+            'nombre':'Nombre',
+            'correo':'Correo',
+            'mensaje':'Mensaje',
+        }
+
+        widgets = {
+            'nombre': forms.TextInput(attrs={}),
+            'correo': forms.TextInput(attrs={}),
+            'mensaje': forms.Textarea(attrs={}),
+
+}
