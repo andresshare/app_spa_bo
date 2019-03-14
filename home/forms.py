@@ -7,14 +7,14 @@ class FormularioContacto(forms.ModelForm):
         model = Contacto
 
         fields = [
-            'nombre',
-            'correo',
-            'mensaje',
+            'name',
+            'email',
+            'message',
         ]
         labels = {
-            'nombre':'Nombre',
-            'correo':'Correo',
-            'mensaje':'Mensaje',
+            'name':'Name',
+            'Email':'Email',
+            'Message':'Message',
         }
 
         widgets = {
